@@ -1,0 +1,11 @@
+{
+  "seocrawlerApp": {
+    "PostStatus": {
+      "null": "",
+      "PENDING": "PENDING",
+      "DRAFT": "DRAFT",
+      "PUBLISHED": "PUBLISHED",
+      "REMOVED": "REMOVED"
+    }
+  }
+}

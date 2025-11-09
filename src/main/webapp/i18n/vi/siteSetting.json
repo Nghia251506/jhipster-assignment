@@ -1,0 +1,30 @@
+{
+  "seocrawlerApp": {
+    "siteSetting": {
+      "home": {
+        "title": "Site Settings",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Site Setting",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Site Setting",
+        "notFound": "No Site Settings found"
+      },
+      "created": "Một Site Setting mới được tạo với định danh {{ param }}",
+      "updated": "Một Site Setting cập nhật với định danh {{ param }}",
+      "deleted": "Một Site Setting đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Site Setting {{ id }}?"
+      },
+      "detail": {
+        "title": "Site Setting"
+      },
+      "id": "ID",
+      "siteTitle": "Site Title",
+      "siteDescription": "Site Description",
+      "siteKeywords": "Site Keywords",
+      "gaTrackingId": "Ga Tracking Id",
+      "bannerTop": "Banner Top",
+      "bannerSidebar": "Banner Sidebar",
+      "tenant": "Tenant"
+    }
+  }
+}

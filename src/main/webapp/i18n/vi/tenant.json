@@ -1,0 +1,29 @@
+{
+  "seocrawlerApp": {
+    "tenant": {
+      "home": {
+        "title": "Tenants",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Tenant",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Tenant",
+        "notFound": "No Tenants found"
+      },
+      "created": "Một Tenant mới được tạo với định danh {{ param }}",
+      "updated": "Một Tenant cập nhật với định danh {{ param }}",
+      "deleted": "Một Tenant đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Tenant {{ id }}?"
+      },
+      "detail": {
+        "title": "Tenant"
+      },
+      "id": "ID",
+      "code": "Code",
+      "name": "Name",
+      "contactEmail": "Contact Email",
+      "contactPhone": "Contact Phone",
+      "maxUsers": "Max Users",
+      "status": "Status"
+    }
+  }
+}

@@ -1,0 +1,119 @@
+// ========== ENUMS ==========
+enum TenantStatus { ACTIVE, SUSPENDED }
+enum PostStatus { PENDING, DRAFT, PUBLISHED, REMOVED }
+enum CrawlStatus { NEW, SKIPPED, PUSHED_QUEUE, ERROR }
+
+// ========== TENANT ==========
+entity Tenant {
+  code String required unique,
+  name String required,
+  contactEmail String,
+  contactPhone String,
+  maxUsers Integer required,
+  status TenantStatus required
+}
+
+// ========== APP USER (user thuộc tenant, map sang JHipster User) ==========
+entity AppUser {
+  fullName String required
+}
+
+// AppUser -> JHipster User (jhi_user)
+relationship OneToOne {
+  AppUser{user(login)} to User with builtInEntity
+}
+
+// AppUser -> Tenant
+relationship ManyToOne {
+  AppUser{tenant(code)} to Tenant
+}
+
+// ========== CATEGORY ==========
+entity Category {
+  code String required,
+  name String required,
+  description TextBlob,
+  isActive Boolean required
+}
+
+// ========== SOURCE ==========
+entity Source {
+  name String required,
+  baseUrl String required,
+  listUrl String required,
+  listItemSelector String required,
+  linkAttr String required,
+  titleSelector String,
+  contentSelector String,
+  thumbnailSelector String,
+  authorSelector String,
+  isActive Boolean required,
+  note String
+}
+
+// ========== POST ==========
+entity Post {
+  originUrl String required,
+  title String,
+  slug String,
+  summary TextBlob,
+  content TextBlob,
+  contentRaw TextBlob,
+  thumbnail String,
+  status PostStatus required,
+  publishedAt Instant,
+  viewCount Long required
+}
+
+// ========== TAG ==========
+entity Tag {
+  name String required,
+  slug String
+}
+
+// ========== SITE SETTING ==========
+entity SiteSetting {
+  siteTitle String,
+  siteDescription TextBlob,
+  siteKeywords TextBlob,
+  gaTrackingId String,
+  bannerTop TextBlob,
+  bannerSidebar TextBlob
+}
+
+// ========== CRAWL LOG ==========
+entity CrawlLog {
+  url String required,
+  status CrawlStatus required,
+  errorMessage String,
+  crawledAt Instant required
+}
+
+// ========== RELATIONSHIPS TENANT-CENTRIC ==========
+
+// mọi thứ đều gắn tenant
+relationship ManyToOne {
+  Category{tenant(code)} to Tenant
+  Source{tenant(code)} to Tenant
+  Post{tenant(code)} to Tenant
+  Tag{tenant(code)} to Tenant
+  SiteSetting{tenant(code)} to Tenant
+  CrawlLog{tenant(code)} to Tenant
+}
+
+// domain logic: source/category/post/tag/crawl
+relationship ManyToOne {
+  Source{category(name)} to Category
+  Post{source(name)} to Source
+  Post{category(name)} to Category
+}
+
+// tags cho post
+relationship ManyToMany {
+  Post{tags(name)} to Tag{posts}
+}
+
+// ========== OPTIONS ==========
+paginate * with pagination
+service * with serviceClass
+dto * with mapstruct

@@ -1,0 +1,28 @@
+{
+  "seocrawlerApp": {
+    "crawlLog": {
+      "home": {
+        "title": "Crawl Logs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Crawl Log",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Crawl Log",
+        "notFound": "No Crawl Logs found"
+      },
+      "created": "Một Crawl Log mới được tạo với định danh {{ param }}",
+      "updated": "Một Crawl Log cập nhật với định danh {{ param }}",
+      "deleted": "Một Crawl Log đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Crawl Log {{ id }}?"
+      },
+      "detail": {
+        "title": "Crawl Log"
+      },
+      "id": "ID",
+      "url": "Url",
+      "status": "Status",
+      "errorMessage": "Error Message",
+      "crawledAt": "Crawled At",
+      "tenant": "Tenant"
+    }
+  }
+}

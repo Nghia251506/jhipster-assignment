@@ -1,0 +1,9 @@
+{
+  "seocrawlerApp": {
+    "TenantStatus": {
+      "null": "",
+      "ACTIVE": "ACTIVE",
+      "SUSPENDED": "SUSPENDED"
+    }
+  }
+}

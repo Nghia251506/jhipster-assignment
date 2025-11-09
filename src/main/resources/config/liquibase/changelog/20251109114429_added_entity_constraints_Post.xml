@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity Post.
+    -->
+    <changeSet id="20251109114429-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="tenant_id"
+                                 baseTableName="post"
+                                 constraintName="fk_post__tenant_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tenant"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="source_id"
+                                 baseTableName="post"
+                                 constraintName="fk_post__source_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="source"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="category_id"
+                                 baseTableName="post"
+                                 constraintName="fk_post__category_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="category"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="post_id"
+                                 baseTableName="rel_post__tags"
+                                 constraintName="fk_rel_post__tags__post_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="post"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="tags_id"
+                                 baseTableName="rel_post__tags"
+                                 constraintName="fk_rel_post__tags__tags_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tag"
+                                 />
+    </changeSet>
+</databaseChangeLog>

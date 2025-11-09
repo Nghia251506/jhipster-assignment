@@ -7,7 +7,15 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Thực thể",
-        "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+        "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
+        "tenant": "Tenant",
+        "appUser": "App User",
+        "category": "Category",
+        "source": "Source",
+        "post": "Post",
+        "tag": "Tag",
+        "siteSetting": "Site Setting",
+        "crawlLog": "Crawl Log"
       },
       "account": {
         "main": "Tài khoản",

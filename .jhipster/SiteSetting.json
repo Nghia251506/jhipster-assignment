@@ -1,0 +1,46 @@
+{
+  "annotations": {
+    "changelogDate": "20251109114431"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "siteTitle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "siteDescription",
+      "fieldType": "TextBlob"
+    },
+    {
+      "fieldName": "siteKeywords",
+      "fieldType": "TextBlob"
+    },
+    {
+      "fieldName": "gaTrackingId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bannerTop",
+      "fieldType": "TextBlob"
+    },
+    {
+      "fieldName": "bannerSidebar",
+      "fieldType": "TextBlob"
+    }
+  ],
+  "name": "SiteSetting",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "code",
+      "otherEntityName": "tenant",
+      "relationshipName": "tenant",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

@@ -1,0 +1,42 @@
+{
+  "annotations": {
+    "changelogDate": "20251109114432"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "url",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "CrawlStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "NEW,SKIPPED,PUSHED_QUEUE,ERROR"
+    },
+    {
+      "fieldName": "errorMessage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "crawledAt",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "CrawlLog",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "code",
+      "otherEntityName": "tenant",
+      "relationshipName": "tenant",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

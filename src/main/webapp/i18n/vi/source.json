@@ -1,0 +1,36 @@
+{
+  "seocrawlerApp": {
+    "source": {
+      "home": {
+        "title": "Sources",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Source",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Source",
+        "notFound": "No Sources found"
+      },
+      "created": "Một Source mới được tạo với định danh {{ param }}",
+      "updated": "Một Source cập nhật với định danh {{ param }}",
+      "deleted": "Một Source đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Source {{ id }}?"
+      },
+      "detail": {
+        "title": "Source"
+      },
+      "id": "ID",
+      "name": "Name",
+      "baseUrl": "Base Url",
+      "listUrl": "List Url",
+      "listItemSelector": "List Item Selector",
+      "linkAttr": "Link Attr",
+      "titleSelector": "Title Selector",
+      "contentSelector": "Content Selector",
+      "thumbnailSelector": "Thumbnail Selector",
+      "authorSelector": "Author Selector",
+      "isActive": "Is Active",
+      "note": "Note",
+      "tenant": "Tenant",
+      "category": "Category"
+    }
+  }
+}

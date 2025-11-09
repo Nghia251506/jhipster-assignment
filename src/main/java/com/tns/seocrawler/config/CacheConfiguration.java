@@ -50,6 +50,16 @@ public class CacheConfiguration {
             createCache(cm, com.tns.seocrawler.domain.User.class.getName());
             createCache(cm, com.tns.seocrawler.domain.Authority.class.getName());
             createCache(cm, com.tns.seocrawler.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.tns.seocrawler.domain.Tenant.class.getName());
+            createCache(cm, com.tns.seocrawler.domain.AppUser.class.getName());
+            createCache(cm, com.tns.seocrawler.domain.Category.class.getName());
+            createCache(cm, com.tns.seocrawler.domain.Source.class.getName());
+            createCache(cm, com.tns.seocrawler.domain.Post.class.getName());
+            createCache(cm, com.tns.seocrawler.domain.Post.class.getName() + ".tags");
+            createCache(cm, com.tns.seocrawler.domain.Tag.class.getName());
+            createCache(cm, com.tns.seocrawler.domain.Tag.class.getName() + ".posts");
+            createCache(cm, com.tns.seocrawler.domain.SiteSetting.class.getName());
+            createCache(cm, com.tns.seocrawler.domain.CrawlLog.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
