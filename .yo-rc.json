@@ -1,0 +1,33 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "authenticationType": "jwt",
+    "baseName": "seocrawler",
+    "buildTool": "maven",
+    "cacheProvider": "ehcache",
+    "clientFramework": "react",
+    "clientTestFrameworks": [],
+    "clientTheme": "none",
+    "creationTimestamp": 1762687661379,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "enableHibernateCache": true,
+    "enableTranslation": true,
+    "entities": [],
+    "feignClient": null,
+    "jhipsterVersion": "8.11.0",
+    "jwtSecretKey": "MDdmYjE3ZDI4MjJjY2NjYTE5MzZkNDQ2MTU5YzBiYzVkMDZhMWE4ZWFlZGYwNmIwNTI4NmQwN2M3MTY2ZDkwYmY5ZjdmYmViMGY2ZWJjM2FmYzI4ZWIyOGM5ZGRjMWVlYzMwYjFjM2IwMmI2YjJlMzFiMzUyMzc5NTBmMWU5NTQ=",
+    "languages": ["vi"],
+    "microfrontend": null,
+    "microfrontends": [],
+    "nativeLanguage": "vi",
+    "packageName": "com.tns.seocrawler",
+    "prodDatabaseType": "mysql",
+    "reactive": false,
+    "serverPort": null,
+    "serviceDiscoveryType": null,
+    "syncUserWithIdp": null,
+    "testFrameworks": [],
+    "withAdminUi": true
+  }
+}
