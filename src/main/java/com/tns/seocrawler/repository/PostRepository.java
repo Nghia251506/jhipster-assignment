@@ -55,4 +55,6 @@ public interface PostRepository extends PostRepositoryWithBagRelationships, JpaR
         @Param("slug") String slug,
         @Param("status") PostStatus status
     );
+
+    boolean existsByOriginUrl(String originUrl);
 }

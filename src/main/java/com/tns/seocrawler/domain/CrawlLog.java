@@ -153,4 +153,6 @@ public class CrawlLog implements Serializable {
             ", crawledAt='" + getCrawledAt() + "'" +
             "}";
     }
+
+    public void setSource(Source source) {}
 }

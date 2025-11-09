@@ -37,4 +37,7 @@ public interface SourceRepository extends JpaRepository<Source, Long> {
 
     @Query("select source from Source source left join fetch source.tenant left join fetch source.category where source.id =:id")
     Optional<Source> findOneWithToOneRelationships(@Param("id") Long id);
+
+    @Query("select s from Source s where s.isActive = true and s.tenant.status = com.tns.seocrawler.domain.enumeration.TenantStatus.ACTIVE")
+    List<Source> findAllActiveForActiveTenants();
 }
