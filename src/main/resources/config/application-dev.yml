@@ -23,7 +23,7 @@ logging:
 spring:
   docker:
     compose:
-      enabled: true
+      enabled: false
   rabbitmq:
     host: localhost
     port: 5672
@@ -40,7 +40,7 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://localhost:3307/news_crawler?useUnicode=true&characterEncoding=utf8&useSSL=false&createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/assignment_crawler?useUnicode=true&characterEncoding=utf8&useSSL=false&createDatabaseIfNotExist=true
     username: root
     password:
     hikari:
